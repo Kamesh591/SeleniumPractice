@@ -4,34 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.Objects;
 
-public class FirstTest {
+public class SecondTest extends SuperTest{
 
-    WebDriver driver;
 
-    @BeforeMethod
-    public void beforeMothod(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shalini\\Downloads\\Selenium-Prac\\chromedriver.exe");
-        driver = new ChromeDriver();
-        System.out.println("This is invoked before every method");
-    }
-
-    @AfterMethod
-    public void afterMethod(){
-        if (Objects.nonNull(driver)){
-            driver.close();
-
-        }
-        System.out.println("This will be invoked after every method completion");
-    }
     @Test
-    @Parameters()
     public void dropdownSelection() throws InterruptedException {
 
         driver.manage().window().maximize();
@@ -58,6 +38,16 @@ public class FirstTest {
     public void test3() {
         System.out.println("This is my test3");
     }
+
+   /* @BeforeSuite(alwaysRun = true)
+    public static   void beforeSuite(){
+        System.out.println("We load properties files and excel objectes etc");
+    }
+
+    @AfterSuite(alwaysRun = true)
+    public static void afterSuite(){
+        System.out.println("We will unable all the objects created above");
+    }*/
 }
 
 

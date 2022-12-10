@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Grouping examples" parallel="true" thread-count="2" >
+
+   <test name="smoke">
+       <parameter name="URL" value="https://us04web.zoom.us/postattendee?mn=9U4Lu8GDIpKUBvSBJmwXmAEE4f0r4HGISnvU.lOE0X3_L85Z0tS2A"/>
+       <parameter name="userName" value="agent_admin"></parameter>
+       <groups>
+           <run>
+               <include name="Smoke"/>
+           </run>
+       </groups>
+       <classes>
+           <class name="org.grouping.FirstClass"></class>
+           <class name="org.grouping.SecondClass"></class>
+       </classes>
+   </test>
+
+</suite>
+
+
+

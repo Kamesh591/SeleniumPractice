@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
 
-    <test verbose="2" preserve-order="true" name="C:/Users/Shalini/Downloads/Selenium-Prac">
+    <test verbose="2" preserve-order="true" name="withdrawMoneyfromATM">
         <classes>
             <class name="org.example.AppTest">
                 <methods>
@@ -10,13 +10,22 @@
                 </methods>
             </class>
             <class name="testngimpl.FirstTest">
-                <methods>
+                <!--<methods>
                     <include name="dropdownSelection"/>
                     <include name="test2"/>
                     <exclude name="test3"/>
-                </methods>
+                </methods>-->
             </class>
         </classes>
     </test>
+    
+    <test name="example2">
+        <packages>
+            <package name="testngimpl"></package>
+        </packages>
+
+    </test>
 </suite>
+
+
 

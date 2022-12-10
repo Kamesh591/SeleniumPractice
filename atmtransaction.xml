@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ATM Opeartions" parallel="true" thread-count="3" >
+
+    <test verbose="2" preserve-order="true" name="withdrawMoneyfromATM" parallel="true">
+        <classes>
+            <class name="testngimpl.InsertCard"></class>
+            <class name="testngimpl.EnterPin"></class>
+            <class name="testngimpl.WithdrawMoney"></class>
+            <class name="testngimpl.CollectCard"></class>
+
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="BalanceCehck" parallel="true">
+        <classes>
+            <class name="testngimpl.InsertCard"></class>
+            <class name="testngimpl.EnterPin"></class>
+            <class name="testngimpl.BalanceCheck"></class>
+            <class name="testngimpl.CollectCard"></class>
+
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="PinChange" parallel="true">
+        <classes>
+            <class name="testngimpl.InsertCard"></class>
+            <class name="testngimpl.EnterPin"></class>
+            <class name="testngimpl.PinChange"></class>
+            <class name="testngimpl.CollectCard"></class>
+
+        </classes>
+    </test>
+
+</suite>
+
+
+
