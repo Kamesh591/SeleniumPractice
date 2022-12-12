@@ -17,6 +17,33 @@ public class ReadImpl {
         FileInputStream fileInputStream= new FileInputStream(System.getProperty("user.dir")+"/Excel.xlsx");
         XSSFWorkbook xssfWorkbook= new XSSFWorkbook(fileInputStream);
         XSSFSheet xssfSheet= xssfWorkbook.getSheet("Movie");
+       // Row newRowsas= xssfSheet.getRow(0);
+      //  Iterator<Cell> columns=   newRowsas.cellIterator();
+
+
+        /*List<String> total=new ArrayList<>();
+        List<List<String>> totalList= new ArrayList<>();
+      Iterator<Row> rows=  xssfSheet.rowIterator();
+      while (rows.hasNext()){
+          Row newRow=rows.next();
+          Iterator<Cell> columns=   newRow.cellIterator();
+          while (columns.hasNext()){
+              total.add(columns.next().toString());
+
+          }
+
+
+      }
+        totalList.add(total);
+
+       *//* while (columns.hasNext()){
+          //  System.out.println(columns.next().toString());
+            hearders.add(columns.next().toString());
+        }*//*
+        System.out.println(totalList);*/
+
+
+
         Iterator<Row> rows=xssfSheet.iterator();
 
         int rowsize=0;
@@ -51,7 +78,7 @@ public class ReadImpl {
 
 while (rows.hasNext()){
     Row row1= rows.next();
-    switch (row1.getCell(columnsize-1).getCellType())
+    switch (row1.getCell(columnsize).getCellType())
     {
         case  BOOLEAN:
             System.out.println(row1.getCell(columnsize-1).getBooleanCellValue());
@@ -66,6 +93,7 @@ while (rows.hasNext()){
     }
    // System.out.println(row1.getCell(columnsize-1).getStringCellValue());
 }
+
 
         /*while (rows.hasNext()){
             Row rowa=rows.next();

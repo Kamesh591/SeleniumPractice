@@ -18,7 +18,7 @@ public class TakeScreenshots {
     public static void main(String[] args) throws IOException {
          WebDriver driver;
         ChromeOptions options = new ChromeOptions();
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup(); // Replacement for driver setup. System.setProperty();
         driver=new ChromeDriver(options);
         driver.get("https://rahulshettyacademy.com/client");
         TakesScreenshot ts = (TakesScreenshot)driver;
